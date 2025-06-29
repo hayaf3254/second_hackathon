@@ -98,7 +98,7 @@ function removeCustomOption(category, option) {
 
 async function handleSubmit() {
   try {
-    const response = await fetch('http://localhost:3000/suggest', {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/suggest`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
