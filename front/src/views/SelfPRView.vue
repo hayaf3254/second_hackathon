@@ -76,7 +76,7 @@ async function handleSubmit() {
   isLoading.value = true
   
   try {
-    const response = await fetch('http://localhost:3000/selfPR', {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/selfPR`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

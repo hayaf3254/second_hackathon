@@ -35,7 +35,7 @@ async function handleSubmit() {
   isLoading.value = true
   
   try {
-    const response = await fetch('http://localhost:3000/resume', {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/resume`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
